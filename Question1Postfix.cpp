@@ -14,17 +14,17 @@ using namespace std;
 
 void evaluateExpression(ifstream& inpF, ofstream& outF,
                         stackType<double>& stack,
-                        char& ch, bool& isExpOk);               //initalize function to evaluate postfix expression
+                        char& ch, bool& isExpOk);               //initialize function to evaluate postfix expression
 void evaluateOpr(ofstream& out, stackType<double>& stack,
-                 char& ch, bool& isExpOk);                      //initalize function to evaluate operator
+                 char& ch, bool& isExpOk);                      //initialize function to evaluate operator
 void discardExp(ifstream& in, ofstream& out, char& ch);
 void printResult(ofstream& outF, stackType<double>& stack,
-                 bool isExpOk);                                 //initalize function to print result of postfix
+                 bool isExpOk);                                 //initialize function to print result of postfix
 
 int main()
 {
-    bool expressionOk;          //initalize boolean
-    char ch;                       //initalize char
+    bool expressionOk;          //initialize boolean
+    char ch;                       //initialize char
     stackType<double> stack(100);  //creates stack of type double size 100
     ifstream infile;            //input filestream
     ofstream outfile;           //output filestream
@@ -46,7 +46,7 @@ int main()
     infile >> ch;           //reads file characters
     while (infile)  //while file is open or accessable
     {
-        stack.initializeStack();        //initalizes stack to contain characters of files
+        stack.initializeStack();        //initializes stack to contain characters of files
         expressionOk = true;            //sets expression boolean to true
         outfile << ch;          //outputs characters to file
 
@@ -104,9 +104,9 @@ void evaluateExpression(ifstream& inpF, ofstream& outF, stackType<double>& stack
 
 
 void evaluateOpr(ofstream& out, stackType<double>& stack,
-              char& ch, bool& isExpOk)                      //initalize function to evaluate operand
+              char& ch, bool& isExpOk)                      //initialize function to evaluate operand
 {
-    double op1, op2;        //initalize holders for operands
+    double op1, op2;        //initialize holders for operands
 
     if (stack.isEmptyStack())       //if the stack is empty...
     {
