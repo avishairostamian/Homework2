@@ -1,0 +1,6 @@
+Avishai Rostamian
+Professor Fried
+Question 4 Whitepaper
+5/02/21
+
+	This program can perform functions to a stack including listing all the elements in the stack as well as iterating through the stack and changing one of its values. I first created the function to list all the elements in the stack. The function creates a copy of the stack using the integrated ‘=’ operator that is included in the C++ library for stacks. I then checked that the stack was not empty and iterated through it. This was done by outputting the top of the stack and then removing that element to get the next one (stack.top() and pop()). I repeated and looped through the stack until it was empty. Next function was to change the value of an element at any position. This was done by popping the stack x-1 times (position requested) and pushing the desired value. In the main this was tested by creating a stack and pushing a bunch of integers to it. I then listed all the elements in the stack, ran the change element at a specific value and then listed the new stack with the new value.
