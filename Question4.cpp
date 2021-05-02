@@ -7,14 +7,18 @@
 
 
 
-
 #include <iostream>
 #include <stack>
 using namespace std;
 
 
-void listall(stack<int> x){                 //function to list all the elements in a stack
-    
+void listall(stack<int> y){                 //function to list all the elements in a stack
+
+    stack<int> x;     //new stack to hold value of current stack so elements do not get lost
+    x = y;        //set new stack = to current stack
+
+    if(x.empty()) cout << "\nStack is empty";
+
     cout << "\nAll elements in stack: ";
     
     while(!x.empty()){                      //loop outputs the top value of the stack then pops the top value giving the next value, looping until the stack is empty
@@ -47,13 +51,26 @@ int main() {
     
     stack<int> myStack;     //initialize stack and give values
     
-    myStack.push(5);        //Push value 5 to stack
+    myStack.push(5);
     
-    myStack.push(3);        //Push value 3 to stack
+    myStack.push(3);
     
-    myStack.push(2);        //Push value 2 to stack
+    myStack.push(2);
     
-    listall(myStack);           //call to function to list all elements in stack function
+//    cout << "# of Stack: " << myStack.size() << endl;
+//
+//
+//    cout << "Popping " << myStack.top() << endl;
+//
+//    myStack.pop();
+//
+//    cout << "# of Stack: " << myStack.size() << endl;
+    
+    
+//
+
+
+    listall(myStack);           //call to list all elements in stack function
     
 
     
