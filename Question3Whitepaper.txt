@@ -1,0 +1,8 @@
+Avishai Rostamian
+Professor Fried
+Question 3 Whitepaper
+5/02/21
+
+This program performs millions of operations on a linked list based
+stack and an array based stack testing which is faster. First I created the necessary components for a linked list starting with its node structure. After declaring the node structure with its data and link I initialized the necessary functions for treating our linked list as a stack. This includes its push and pop functions which adds another node to the linked list (push) or removes it (pop). I then created the same parameters for our array based stack starting with initializing a blank array of length 100 and a top value of -1 (empty). The push and pop functions were as well initialized adding to the array and increasing its top value or removing from the array and decreasing from its top value. I then ran the array based stack through a for loop with 2 million operations while timing it. I did the same for the linked list based stack and found the array based stack to be much quicker. The program then outputs the timing of the two stacks as well as its difference and which was quicker.
+
