@@ -1,12 +1,3 @@
-//
-//  main.cpp
-//  Hw2.4
-//
-//  Created by Avishai Rostamian on 4/27/21.
-//
-
-
-
 #include <iostream>
 #include <stack>
 using namespace std;
@@ -30,8 +21,11 @@ void listall(stack<int> y){                 //function to list all the elements 
 }
 
 
-int changel(stack<int> &x, int position, int value){        //function to iterate through stack and change a value based on position
-    
+stack<int> changel(stack<int> &x, int position, int value){        //function to iterate through stack and change a value based on position
+    stack<int> temp1;     //New stack to hold values of stack to be edited
+
+    x = temp1;      //Set new stack elements equal to current stack
+
     cout << "\nChanging element in position " << position << " to value " << value << endl;
 
     int counter = 0;
@@ -43,8 +37,14 @@ int changel(stack<int> &x, int position, int value){        //function to iterat
     }
     
     x.push(value);                  //when loop is finished the requested value is inputted at the requested position
+
+    for(int i = 0; i < position; i++){    //Puts back elements that were popped when changing position x
+      x.push(temp1.top());    //Adds element back to stack
+      temp1.pop();          //Pops top element to reveal next element to be pushed
+
+    }
     
-    return 1;
+    return x;
 }
 
 int main() {
