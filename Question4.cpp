@@ -76,7 +76,7 @@ int main() {
     
     changel(myStack, 1, 10);        //call to function changing first position to value 10
     
-    listall(myStack);               //call to list alll elements in stack function
+    listall(myStack);               //call to list all elements in stack function
     
     cout << endl;
     return 0;
